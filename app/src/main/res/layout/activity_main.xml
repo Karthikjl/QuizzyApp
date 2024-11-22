@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Quiz Round and Score Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="16dp">
+
+        <!-- Quiz Round Text -->
+        <TextView
+            android:id="@+id/quizCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz Round: 1 | Question: 1/10"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Score Text -->
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | Score: 0"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Question Section -->
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Loading Question..."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/question_background"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp" />
+
+    <!-- Options Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="16dp">
+
+        <!-- Option A -->
+        <Button
+            android:id="@+id/optionAButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_background"
+            android:text="Option A"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Option B -->
+        <Button
+            android:id="@+id/optionBButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_background"
+            android:text="Option B"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Option C -->
+        <Button
+            android:id="@+id/optionCButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_background"
+            android:text="Option C"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Option D -->
+        <Button
+            android:id="@+id/optionDButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_background"
+            android:text="Option D"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Feedback Section -->
+    <TextView
+        android:id="@+id/feedbackTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Answer is Correct!"
+        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Next Button Section -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/correctnessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@id/feedbackTextView"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" /> <!-- Initially hidden -->
+
+</LinearLayout>
